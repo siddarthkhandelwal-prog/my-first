@@ -1,0 +1,18 @@
+booking_id,lead_id,booking_date,policy_start_date,customer_name,vehicle_make,vehicle_model,vehicle_year,policy_type,partner,premium_amount,policy_number,payment_status,agent_remarks
+B001,L001,2026-04-20,2026-04-21,Rahul Sharma,Maruti,Swift,2022,Comprehensive,Policybazaar,8500,PB-2026-001234,paid,Customer opted for zero dep add-on
+B002,L002,2026-04-20,2026-04-22,Priya Singh,Hyundai,Creta,2023,Third Party,Acko,3200,ACKO-2026-005678,paid,Renewal case from last year
+B003,L004,2026-04-21,2026-04-23,Sunita Patel,Honda,City,2020,Comprehensive,Acko,9200,ACKO-2026-005679,paid,Added engine protect cover
+B004,L005,2026-04-21,2026-04-22,Vikram Mehta,Bajaj,Pulsar,2023,Third Party,Policybazaar,1800,PB-2026-001235,paid,Quick conversion same day
+B005,L006,2026-04-21,2026-04-23,Neha Gupta,Mahindra,Scorpio,2022,Comprehensive,Acko,12500,ACKO-2026-005680,paid,CRM win-back success
+B006,L008,2026-04-22,2026-04-24,Ananya Roy,Toyota,Fortuner,2023,Comprehensive,Acko,18000,ACKO-2026-005681,paid,High value policy
+B007,L010,2026-04-23,2026-04-25,Deepa Nair,Maruti,Baleno,2023,Comprehensive,Acko,7800,ACKO-2026-005682,paid,First time buyer
+B008,L011,2026-04-23,2026-04-25,Arjun Kapoor,Tata,Punch,2024,Third Party,Policybazaar,2100,PB-2026-001236,paid,New car insurance
+B009,L013,2026-04-24,2026-04-26,Manoj Tiwari,Volkswagen,Polo,2022,Comprehensive,Policybazaar,8900,PB-2026-001237,paid,Switched from competitor
+B010,L014,2026-04-24,2026-04-26,Pooja Iyer,Skoda,Kushaq,2023,Comprehensive,Acko,11200,ACKO-2026-005683,paid,Bundle with accessories cover
+B011,L015,2026-04-24,2026-04-26,Ravi Pillai,Hero,Splendor,2022,Third Party,Policybazaar,1500,PB-2026-001238,paid,CRM retarget conversion
+B012,L017,2026-04-25,2026-04-27,Gaurav Singh,Hyundai,Venue,2024,Comprehensive,Policybazaar,9500,PB-2026-001239,paid,New vehicle first insurance
+B013,L019,2026-04-26,2026-04-28,Suresh Kumar,Ford,EcoSport,2021,Third Party,Policybazaar,2800,PB-2026-001240,paid,Budget conscious customer
+B014,L020,2026-04-26,2026-04-28,Nisha Bansal,MG,Hector,2023,Comprehensive,Acko,13500,ACKO-2026-005684,paid,Added PA cover
+B015,L022,2026-04-27,2026-04-29,Divya Patel,Maruti,Wagon R,2022,Third Party,Acko,2200,ACKO-2026-005685,paid,Price sensitive customer
+B016,L023,2026-04-27,2026-04-29,Prakash Nair,Kia,Carens,2023,Comprehensive,Policybazaar,10800,PB-2026-001241,paid,Blog lead high quality
+B017,L024,2026-04-27,2026-04-29,Smita Rao,Hyundai,Tucson,2024,Comprehensive,Acko,16500,ACKO-2026-005686,paid,CRM whatsapp conversion

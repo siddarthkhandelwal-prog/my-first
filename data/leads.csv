@@ -1,0 +1,26 @@
+lead_id,date,source,channel,vehicle_type,vehicle_make,vehicle_model,vehicle_year,customer_name,customer_phone,customer_city,customer_state,policy_type,transferred_to,status,crm_retargeted
+L001,2026-04-20,organic,google_seo,Car,Maruti,Swift,2022,Rahul Sharma,9876543210,Mumbai,Maharashtra,Comprehensive,Policybazaar,converted,No
+L002,2026-04-20,organic,google_seo,Car,Hyundai,Creta,2023,Priya Singh,9876543211,Delhi,Delhi,Third Party,Acko,converted,No
+L003,2026-04-20,crm,email_retarget,Car,Tata,Nexon,2021,Amit Kumar,9876543212,Bangalore,Karnataka,Comprehensive,Policybazaar,pending,Yes
+L004,2026-04-21,organic,content_blog,Car,Honda,City,2020,Sunita Patel,9876543213,Pune,Maharashtra,Comprehensive,Acko,converted,No
+L005,2026-04-21,organic,google_seo,Two Wheeler,Bajaj,Pulsar,2023,Vikram Mehta,9876543214,Chennai,Tamil Nadu,Third Party,Policybazaar,converted,No
+L006,2026-04-21,crm,whatsapp_retarget,Car,Mahindra,Scorpio,2022,Neha Gupta,9876543215,Hyderabad,Telangana,Comprehensive,Acko,converted,Yes
+L007,2026-04-22,organic,google_seo,Car,Kia,Seltos,2024,Rajesh Verma,9876543216,Ahmedabad,Gujarat,Comprehensive,Policybazaar,pending,No
+L008,2026-04-22,organic,youtube,Car,Toyota,Fortuner,2023,Ananya Roy,9876543217,Kolkata,West Bengal,Comprehensive,Acko,converted,No
+L009,2026-04-22,crm,sms_retarget,Car,Hyundai,i20,2022,Sanjay Yadav,9876543218,Jaipur,Rajasthan,Third Party,Policybazaar,dropped,Yes
+L010,2026-04-23,organic,google_seo,Car,Maruti,Baleno,2023,Deepa Nair,9876543219,Kochi,Kerala,Comprehensive,Acko,converted,No
+L011,2026-04-23,organic,content_blog,Car,Tata,Punch,2024,Arjun Kapoor,9876543220,Mumbai,Maharashtra,Third Party,Policybazaar,converted,No
+L012,2026-04-23,crm,email_retarget,Car,Renault,Kwid,2021,Kavita Sharma,9876543221,Lucknow,Uttar Pradesh,Comprehensive,Acko,pending,Yes
+L013,2026-04-24,organic,google_seo,Car,Volkswagen,Polo,2022,Manoj Tiwari,9876543222,Bhopal,Madhya Pradesh,Comprehensive,Policybazaar,converted,No
+L014,2026-04-24,organic,google_seo,Car,Skoda,Kushaq,2023,Pooja Iyer,9876543223,Bangalore,Karnataka,Comprehensive,Acko,converted,No
+L015,2026-04-24,crm,whatsapp_retarget,Two Wheeler,Hero,Splendor,2022,Ravi Pillai,9876543224,Trivandrum,Kerala,Third Party,Policybazaar,converted,Yes
+L016,2026-04-25,organic,google_seo,Car,Maruti,Ertiga,2023,Swati Mishra,9876543225,Indore,Madhya Pradesh,Comprehensive,Acko,pending,No
+L017,2026-04-25,organic,content_blog,Car,Hyundai,Venue,2024,Gaurav Singh,9876543226,Chandigarh,Punjab,Comprehensive,Policybazaar,converted,No
+L018,2026-04-25,crm,email_retarget,Car,Tata,Harrier,2023,Meena Joshi,9876543227,Nagpur,Maharashtra,Comprehensive,Acko,dropped,Yes
+L019,2026-04-26,organic,google_seo,Car,Ford,EcoSport,2021,Suresh Kumar,9876543228,Coimbatore,Tamil Nadu,Third Party,Policybazaar,converted,No
+L020,2026-04-26,organic,youtube,Car,MG,Hector,2023,Nisha Bansal,9876543229,Noida,Uttar Pradesh,Comprehensive,Acko,converted,No
+L021,2026-04-26,crm,sms_retarget,Car,Mahindra,XUV700,2024,Arun Reddy,9876543230,Hyderabad,Telangana,Comprehensive,Policybazaar,pending,Yes
+L022,2026-04-27,organic,google_seo,Car,Maruti,Wagon R,2022,Divya Patel,9876543231,Surat,Gujarat,Third Party,Acko,converted,No
+L023,2026-04-27,organic,content_blog,Car,Kia,Carens,2023,Prakash Nair,9876543232,Kochi,Kerala,Comprehensive,Policybazaar,converted,No
+L024,2026-04-27,crm,whatsapp_retarget,Car,Hyundai,Tucson,2024,Smita Rao,9876543233,Pune,Maharashtra,Comprehensive,Acko,converted,Yes
+L025,2026-04-28,organic,google_seo,Car,Tata,Safari,2023,Kiran Sharma,9876543234,Delhi,Delhi,Comprehensive,Policybazaar,pending,No
