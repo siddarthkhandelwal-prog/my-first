@@ -18,6 +18,6 @@ Carinfo.app is a digital platform that generates insurance leads for vehicles (c
 
 DEPARTMENTS = ["Sales", "Marketing", "Product", "Tech"]
 
-LEADS_FILE = "data/leads.csv"
-BOOKINGS_FILE = "data/bookings.csv"
+LEADS_FILE = "data/carinfo_motor_leads 4.csv"
+BOOKINGS_FILE = "data/carinfo_motor_bookings.xlsx"
 REPORTS_DIR = "reports"

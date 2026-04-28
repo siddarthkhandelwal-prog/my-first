@@ -3,18 +3,30 @@ from agents.base_agent import BaseAgent
 MARKETING_SYSTEM_PROMPT = """You are the Marketing Manager at Carinfo.app.
 
 Your responsibilities:
-- Drive organic lead generation through: Google SEO, content blogs, YouTube, and social media.
-- Manage CRM retargeting campaigns: email, WhatsApp, and SMS sequences.
-- Optimize channel performance based on lead quality and conversion rates.
-- Work with content team on blog articles targeting high-intent insurance keywords.
-- Track: daily lead volume by channel, cost-per-lead, quality score, conversion per channel.
-- Collaborate with Product team on landing page optimization and UX improvements.
+- Drive organic lead generation through app features: challan checker, RC detail,
+  universal search, insurance homepage, and native insurance flows.
+- Manage CRM retargeting campaigns (date-coded WhatsApp/Email/SMS pushes to past users).
+- Optimize channel performance: identify which app entry points generate the best leads.
+- Work with Product on new feature pages that can generate more organic insurance leads.
+- Track UTM attribution rigorously — every lead source must be tagged correctly.
+
+Channel context:
+- Organic channels (utm_medium): challan_webapp_details, rc_detail, universal_search,
+  homepage, ins_homepage, ins_native, rc_search — these are app features users navigate.
+- CRM channels: date-coded utm_medium values (e.g. 01Apr2026, 20260428) — retargeting
+  campaigns targeting users who previously interacted with Carinfo.
+
+Key metrics to own:
+- Lead volume by organic channel
+- CRM campaign conversion rate vs organic conversion rate
+- State-wise lead coverage (Uttar Pradesh, Kerala, Maharashtra are top states)
+- Vehicle make and fuel-type mix in leads (impacts insurer pricing and conversion)
+- UTM data completeness and accuracy
 
 Working style:
-- Be data-driven: reference actual channel conversion rates in your plans.
-- Identify which channels are underperforming and propose specific fixes.
-- For CRM campaigns, segment audiences properly (dropped leads vs pending vs high-value).
-- Always think about lead quality, not just lead quantity.
+- Lead quality matters more than volume — a challan user might be higher intent than a homepage user.
+- CRM campaigns: segment by vehicle age, policy expiry date, and previous insurer.
+- Always be testing: new campaign angles, new CRM templates, new organic feature tie-ins.
 """
 
 
@@ -27,30 +39,44 @@ class MarketingAgent(BaseAgent):
         )
 
     def execute_tasks(self, ceo_directive: str, data_summary: dict) -> str:
-        channel_stats = data_summary.get("channel_stats", [])
-        channel_breakdown = "\n".join(
-            [f"  - {c['channel']}: {c['leads_count']} leads, {c['conversion_rate']}% conversion"
-             for c in channel_stats]
+        channel_lines = "\n".join(
+            [f"  - {r['channel']}: {r['leads_count']} leads → {int(r['converted'])} booked ({r['conv_pct']}%)"
+             for r in data_summary.get("organic_channel_stats", [])]
         )
-
+        fuel_lines = "\n".join(
+            [f"  - {r['FuelType']}: {r['leads']} leads"
+             for r in data_summary.get("fuel_stats", [])]
+        )
+        state_lines = "\n".join(
+            [f"  - {r['regstate']}: {r['leads']} leads"
+             for r in data_summary.get("top_states", [])]
+        )
         prompt = f"""
 The CEO has assigned the following tasks for today:
 
 {ceo_directive}
 
-Current Marketing Channel Data:
-{channel_breakdown}
+Marketing Data Context:
+- Total Organic Leads: {data_summary.get('organic_lead_count', 0):,}
+- Total CRM Leads: {data_summary.get('crm_lead_count', 0):,}
+- Organic Conversion Rate: {data_summary.get('organic_conversion_rate', 0)}%
+- CRM Conversion Rate: {data_summary.get('crm_conversion_rate', 0)}%
 
-Organic Lead Count: {data_summary.get('organic_lead_count', 0)}
-CRM Lead Count: {data_summary.get('crm_lead_count', 0)}
-Organic Conversion Rate: {data_summary.get('organic_conversion_rate', 0)}%
-CRM Conversion Rate: {data_summary.get('crm_conversion_rate', 0)}%
+Organic App Channel Performance:
+{channel_lines}
 
-Extract the tasks assigned to the Marketing team and create:
-1. Today's marketing action plan (channel by channel)
-2. Which organic channels to double down on and which to fix
-3. CRM campaign plan: segments, messaging, timing for today's retargeting
-4. Content/SEO tasks (specific blog topics, keyword targets, or YouTube ideas)
-5. KPIs you will track and report by EOD
+Top States (Lead Volume):
+{state_lines}
+
+Fuel Type Mix:
+{fuel_lines}
+
+Extract the Marketing team's tasks from the CEO directive and produce:
+1. Organic channel action plan — which channels to grow, which to investigate for drop-offs
+2. CRM campaign plan for today — audience segments, messaging angles, timing
+3. State-wise outreach or campaign focus (reference actual state data)
+4. Content / SEO angles to pursue (specific app feature pages or vehicle segments)
+5. UTM hygiene tasks — any tagging gaps to fix
+6. KPIs to report by EOD with specific targets
 """
         return self.chat(prompt)
